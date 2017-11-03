@@ -15,7 +15,8 @@ class visitor;*/
 
 class color{
     
-    virtual void accept(class visitor* v){cout<<0;}
+    virtual void accept(class visitor* v)=0;
+    virtual void example(){cout<<"edfd";}//virtual function can define its own definitionin base class {cout<<0;}
     public: 
             void accept_call_derived_template(class visitor* v){
                 accept(v);
