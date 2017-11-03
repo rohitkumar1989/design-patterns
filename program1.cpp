@@ -7,16 +7,12 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 
 #include <iostream>
-//#include<abc.h>
 using namespace std;
-/*class visitor1;
-class visitor2;
-class visitor;*/
 
 class color{
     
-    virtual void accept(class visitor* v)=0;
-    virtual void example(){cout<<"edfd";}//virtual function can define its own definitionin base class {cout<<0;}
+    virtual void accept(class visitor* v)=0;//private pure virtual function for template design pattern...
+//    virtual void example(){cout<<"edfd";}//virtual function can define its own definitionin base class {cout<<0;}
     public: 
             void accept_call_derived_template(class visitor* v){
                 accept(v);
