@@ -17,7 +17,7 @@ class color{
     
     virtual void accept(class visitor* v){cout<<0;}
     public: 
-            void ab(class visitor* v){
+            void accept_call_derived_template(class visitor* v){
                 accept(v);
             }
 };
@@ -83,8 +83,8 @@ int main()
    color *c[]={new blue, new red};
    visitor1 v1;
    visitor2 v2;
-   c[0]->ab(&v1);
-   c[1]->ab(&v2);
+   c[0]->accept_call_derived_template(&v1);
+   c[1]->accept_call_derived_template(&v2);
 
     return 0;
 }
