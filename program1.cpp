@@ -14,13 +14,17 @@ class visitor2;
 class visitor;*/
 
 class color{
-    public:
-    virtual void accept(class visitor* v)=0;
     
+    virtual void accept(class visitor* v){cout<<0;}
+    public: 
+            void ab(class visitor* v){
+                accept(v);
+            }
 };
 
 class red: public color{
     public: 
+            
             void accept(class visitor* v);
 };
 
@@ -79,8 +83,8 @@ int main()
    color *c[]={new blue, new red};
    visitor1 v1;
    visitor2 v2;
-   c[0]->accept(&v1);
-   c[1]->accept(&v2);
+   c[0]->ab(&v1);
+   c[1]->ab(&v2);
 
     return 0;
 }
