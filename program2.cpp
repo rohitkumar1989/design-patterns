@@ -74,10 +74,10 @@ int main()
 	volatile int size=4;
 	element *e[size]={new that("that"),new those("those"),new that("that"),new those("those")};
 	//element *e[size]={new that("that"),new those("those"),&that("that"),new those("those")};
-	//cannot take address of temporary
+	//cannot take address of temporary object
 	for(int i=0;i<size;i++)
 	{
-		e[i].accept(v1);	
+		e[i]->accept(v1);	//can not address usung *e[i].accept(V1)
 		e[i]->accept(v2);	
 				
 	}
