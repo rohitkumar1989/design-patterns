@@ -80,7 +80,7 @@ int main(){
 	comp=dynamic_cast<composite*>(c[0]);
 	comp->children[0]->accept(&v,new composite(7));
 //	c[0]->add(new composite(7));pointer of component type cannot access add()
-// but through  visitor it can be accessed..
+// but through  visitor it can be accessed....
 	c[0]->traverse();
 	return 0;
 }
